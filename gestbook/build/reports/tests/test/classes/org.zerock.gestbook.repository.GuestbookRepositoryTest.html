@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - GuestbookRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>GuestbookRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.zerock.gestbook.repository.html">org.zerock.gestbook.repository</a> &gt; GuestbookRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.501s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testQuery1()</td>
+<td class="success">0.501s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>16:24:57.921 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.zerock.gestbook.repository.GuestbookRepositoryTest]: GuestbookRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:24:57.967 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.zerock.gestbook.GestbookApplication for test class org.zerock.gestbook.repository.GuestbookRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.1)
+
+2024-01-15T16:24:58.153+09:00  INFO 91318 --- [    Test worker] o.z.g.r.GuestbookRepositoryTest          : Starting GuestbookRepositoryTest using Java 17.0.8 with PID 91318 (started by ondd in /Users/ondd/Documents/Java-WorkSpace/LeanSpring-bootWithCode/gestbook)
+2024-01-15T16:24:58.154+09:00  INFO 91318 --- [    Test worker] o.z.g.r.GuestbookRepositoryTest          : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-01-15T16:24:58.454+09:00  INFO 91318 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-15T16:24:58.477+09:00  INFO 91318 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+2024-01-15T16:24:58.676+09:00  INFO 91318 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-15T16:24:58.710+09:00  INFO 91318 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-15T16:24:58.726+09:00  INFO 91318 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-15T16:24:58.831+09:00  INFO 91318 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-15T16:24:58.848+09:00  INFO 91318 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-15T16:24:58.890+09:00  INFO 91318 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7608a838
+2024-01-15T16:24:58.890+09:00  INFO 91318 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-15T16:24:58.910+09:00  WARN 91318 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 8.0.30 version for [org.hibernate.dialect.MariaDBDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 10.4.0. Check the community dialects project for available legacy versions.
+2024-01-15T16:24:59.280+09:00  INFO 91318 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-15T16:24:59.308+09:00  INFO 91318 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-15T16:24:59.400+09:00  WARN 91318 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-15T16:24:59.412+09:00  INFO 91318 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-01-15T16:24:59.847+09:00  INFO 91318 --- [    Test worker] o.z.g.r.GuestbookRepositoryTest          : Started GuestbookRepositoryTest in 1.802 seconds (process running for 2.321)
+Hibernate: 
+    select
+        g1_0.gno,
+        g1_0.content,
+        g1_0.moddate,
+        g1_0.regdate,
+        g1_0.title,
+        g1_0.writer 
+    from
+        guestbook g1_0 
+    where
+        g1_0.title like ? escape '!' 
+    order by
+        g1_0.gno desc 
+    limit
+        ?, ?
+Hibernate: 
+    select
+        count(g1_0.gno) 
+    from
+        guestbook g1_0 
+    where
+        g1_0.title like ? escape '!'
+Guestbook(gno=291, title=Title...291, content=Content...291, writer=User...291)
+Guestbook(gno=281, title=Title...281, content=Content...281, writer=User...281)
+Guestbook(gno=271, title=Title...271, content=Content...271, writer=User...271)
+Guestbook(gno=261, title=Title...261, content=Content...261, writer=User...261)
+Guestbook(gno=251, title=Title...251, content=Content...251, writer=User...251)
+Guestbook(gno=241, title=Title...241, content=Content...241, writer=User...241)
+Guestbook(gno=231, title=Title...231, content=Content...231, writer=User...231)
+Guestbook(gno=221, title=Title...221, content=Content...221, writer=User...221)
+Guestbook(gno=219, title=Title...219, content=Content...219, writer=User...219)
+Guestbook(gno=218, title=Title...218, content=Content...218, writer=User...218)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.5</a> at 2024. 1. 15. 오후 4:25:00</p>
+</div>
+</div>
+</body>
+</html>
