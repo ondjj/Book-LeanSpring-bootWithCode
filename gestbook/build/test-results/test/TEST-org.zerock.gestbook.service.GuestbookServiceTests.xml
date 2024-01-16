@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.zerock.gestbook.service.GuestbookServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-16T06:27:13" hostname="ChangJunui-MacBookPro.local" time="0.364">
+<testsuite name="org.zerock.gestbook.service.GuestbookServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-16T06:51:11" hostname="ChangJunui-MacBookPro.local" time="0.394">
   <properties/>
-  <testcase name="testRegister()" classname="org.zerock.gestbook.service.GuestbookServiceTests" time="0.364"/>
-  <system-out><![CDATA[15:27:11.382 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.zerock.gestbook.service.GuestbookServiceTests]: GuestbookServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:27:11.438 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.zerock.gestbook.GestbookApplication for test class org.zerock.gestbook.service.GuestbookServiceTests
+  <testcase name="testList()" classname="org.zerock.gestbook.service.GuestbookServiceTests" time="0.394"/>
+  <system-out><![CDATA[15:51:09.884 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.zerock.gestbook.service.GuestbookServiceTests]: GuestbookServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:51:09.940 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.zerock.gestbook.GestbookApplication for test class org.zerock.gestbook.service.GuestbookServiceTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,34 +13,52 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.1)
 
-2024-01-16T15:27:11.656+09:00  INFO 9751 --- [    Test worker] o.z.g.service.GuestbookServiceTests      : Starting GuestbookServiceTests using Java 17.0.8 with PID 9751 (started by ondd in /Users/ondd/Documents/Java-WorkSpace/LeanSpring-bootWithCode/gestbook)
-2024-01-16T15:27:11.657+09:00  INFO 9751 --- [    Test worker] o.z.g.service.GuestbookServiceTests      : No active profile set, falling back to 1 default profile: "default"
-2024-01-16T15:27:12.002+09:00  INFO 9751 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-01-16T15:27:12.030+09:00  INFO 9751 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
-2024-01-16T15:27:12.236+09:00  INFO 9751 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-01-16T15:27:12.265+09:00  INFO 9751 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-01-16T15:27:12.280+09:00  INFO 9751 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-01-16T15:27:12.386+09:00  INFO 9751 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-01-16T15:27:12.402+09:00  INFO 9751 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-01-16T15:27:12.499+09:00  INFO 9751 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@775f15fd
-2024-01-16T15:27:12.500+09:00  INFO 9751 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-01-16T15:27:12.522+09:00  WARN 9751 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 8.0.30 version for [org.hibernate.dialect.MariaDBDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 10.4.0. Check the community dialects project for available legacy versions.
-2024-01-16T15:27:12.895+09:00  INFO 9751 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-01-16T15:27:12.956+09:00  INFO 9751 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-16T15:27:13.211+09:00  WARN 9751 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-01-16T15:27:13.227+09:00  INFO 9751 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2024-01-16T15:27:13.419+09:00  INFO 9751 --- [    Test worker] o.z.g.service.GuestbookServiceTests      : Started GuestbookServiceTests in 1.906 seconds (process running for 2.57)
-2024-01-16T15:27:13.734+09:00  INFO 9751 --- [    Test worker] o.z.g.service.GuestbookServiceImpl       : DTO --------------------------------
-2024-01-16T15:27:13.737+09:00  INFO 9751 --- [    Test worker] o.z.g.service.GuestbookServiceImpl       : GuestbookDTO(gno=null, title=Sample Title..., content=Sample content..., writer=user0, regDate=null, modDate=null)
-2024-01-16T15:27:13.738+09:00  INFO 9751 --- [    Test worker] o.z.g.service.GuestbookServiceImpl       : Guestbook(gno=null, title=Sample Title..., content=Sample content..., writer=user0)
+2024-01-16T15:51:10.135+09:00  INFO 10519 --- [    Test worker] o.z.g.service.GuestbookServiceTests      : Starting GuestbookServiceTests using Java 17.0.8 with PID 10519 (started by ondd in /Users/ondd/Documents/Java-WorkSpace/LeanSpring-bootWithCode/gestbook)
+2024-01-16T15:51:10.137+09:00  INFO 10519 --- [    Test worker] o.z.g.service.GuestbookServiceTests      : No active profile set, falling back to 1 default profile: "default"
+2024-01-16T15:51:10.529+09:00  INFO 10519 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-16T15:51:10.556+09:00  INFO 10519 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+2024-01-16T15:51:10.782+09:00  INFO 10519 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-16T15:51:10.811+09:00  INFO 10519 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-16T15:51:10.827+09:00  INFO 10519 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-16T15:51:10.933+09:00  INFO 10519 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-16T15:51:10.951+09:00  INFO 10519 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-16T15:51:11.004+09:00  INFO 10519 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@55951fcd
+2024-01-16T15:51:11.005+09:00  INFO 10519 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-16T15:51:11.026+09:00  WARN 10519 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 8.0.30 version for [org.hibernate.dialect.MariaDBDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 10.4.0. Check the community dialects project for available legacy versions.
+2024-01-16T15:51:11.493+09:00  INFO 10519 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-16T15:51:11.534+09:00  INFO 10519 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-16T15:51:11.778+09:00  WARN 10519 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-16T15:51:11.789+09:00  INFO 10519 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-01-16T15:51:11.967+09:00  INFO 10519 --- [    Test worker] o.z.g.service.GuestbookServiceTests      : Started GuestbookServiceTests in 1.941 seconds (process running for 2.545)
 Hibernate: 
-    insert 
-    into
-        guestbook
-        (content, moddate, regdate, title, writer) 
-    values
-        (?, ?, ?, ?, ?)
-301
+    select
+        g1_0.gno,
+        g1_0.content,
+        g1_0.moddate,
+        g1_0.regdate,
+        g1_0.title,
+        g1_0.writer 
+    from
+        guestbook g1_0 
+    order by
+        g1_0.gno desc 
+    limit
+        ?, ?
+Hibernate: 
+    select
+        count(g1_0.gno) 
+    from
+        guestbook g1_0
+GuestbookDTO(gno=301, title=Sample Title..., content=Sample content..., writer=user0, regDate=2024-01-16T15:27:13.753690, modDate=2024-01-16T15:27:13.753690)
+GuestbookDTO(gno=300, title=Change Title..., content=Change Content..., writer=User...300, regDate=2024-01-15T16:08:46.041736, modDate=2024-01-15T16:13:40.044982)
+GuestbookDTO(gno=299, title=Title...299, content=Content...299, writer=User...299, regDate=2024-01-15T16:08:46.039718, modDate=2024-01-15T16:08:46.039718)
+GuestbookDTO(gno=298, title=Title...298, content=Content...298, writer=User...298, regDate=2024-01-15T16:08:46.038587, modDate=2024-01-15T16:08:46.038587)
+GuestbookDTO(gno=297, title=Title...297, content=Content...297, writer=User...297, regDate=2024-01-15T16:08:46.037368, modDate=2024-01-15T16:08:46.037368)
+GuestbookDTO(gno=296, title=Title...296, content=Content...296, writer=User...296, regDate=2024-01-15T16:08:46.035054, modDate=2024-01-15T16:08:46.035054)
+GuestbookDTO(gno=295, title=Title...295, content=Content...295, writer=User...295, regDate=2024-01-15T16:08:46.032030, modDate=2024-01-15T16:08:46.032030)
+GuestbookDTO(gno=294, title=Title...294, content=Content...294, writer=User...294, regDate=2024-01-15T16:08:46.029852, modDate=2024-01-15T16:08:46.029852)
+GuestbookDTO(gno=293, title=Title...293, content=Content...293, writer=User...293, regDate=2024-01-15T16:08:46.028069, modDate=2024-01-15T16:08:46.028069)
+GuestbookDTO(gno=292, title=Title...292, content=Content...292, writer=User...292, regDate=2024-01-15T16:08:46.026384, modDate=2024-01-15T16:08:46.026384)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
