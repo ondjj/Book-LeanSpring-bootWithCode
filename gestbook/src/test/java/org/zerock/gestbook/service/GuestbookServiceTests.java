@@ -32,4 +32,12 @@ class GuestbookServiceTests {
             System.out.println(guestbookDTO);
         }
     }
+
+    @Test
+    public void testPage_Numbers() {
+        PageRequestDTO pageRequestDTO = PageRequestDTO.builder().page(1).size(10).build();
+        PageResultDTO<GuestbookDTO, Guestbook> resultDTO = service.getList(pageRequestDTO);
+
+        System.out.println(resultDTO);
+    }
 }
