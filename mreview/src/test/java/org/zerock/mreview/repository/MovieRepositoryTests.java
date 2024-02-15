@@ -1,6 +1,7 @@
 package org.zerock.mreview.repository;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.UUID;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -50,6 +51,15 @@ class MovieRepositoryTests {
         PageRequest pageRequest = PageRequest.of(0, 10, Sort.by(Direction.DESC, "mno"));
         Page<Object[]> result = movieRepository.getListPage(pageRequest);
         for (Object[] objects : result.getContent()) {
+            System.out.println(Arrays.toString(objects));
+        }
+    }
+
+    @Test
+    public void testGetMovieWithAll() {
+        List<Object[]> result = movieRepository.getMovieWithAll(94L);
+        System.out.println(result);
+        for (Object[] objects : result) {
             System.out.println(Arrays.toString(objects));
         }
     }
