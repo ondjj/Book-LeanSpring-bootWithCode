@@ -3,6 +3,7 @@ package org.zerock.mreview.dto;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -14,11 +15,10 @@ public class UploadResultDTO implements Serializable {
     private String folderPath;
 
     public String getImageURL() {
-        try {
-            return URLEncoder.encode(folderPath + "/" + uuid + "_" + fileName, "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return "";
+        return URLEncoder.encode(folderPath + "/" + uuid + "_" + fileName, StandardCharsets.UTF_8);
+    }
+
+    public String getThumbnailURL() {
+        return URLEncoder.encode(folderPath + "/s_" + uuid + fileName, StandardCharsets.UTF_8);
     }
 }
