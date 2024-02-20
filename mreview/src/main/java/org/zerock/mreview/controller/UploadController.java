@@ -2,7 +2,9 @@ package org.zerock.mreview.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -112,5 +114,14 @@ public class UploadController {
             throw new RuntimeException(e);
         }
         return result;
+    }
+
+    @PostMapping("/removeFile")
+    public ResponseEntity<Boolean> removeFile(String fileName) {
+        String srcFileName = null;
+        srcFileName = URLEncoder.encode(fileName, StandardCharsets.UTF_8);
+        File file = new File(uploadPath + File.separator + srcFileName);
+        boolean result = file.delete();
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }
